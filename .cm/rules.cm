@@ -1,0 +1,33 @@
+# -*- mode: yaml -*-
+
+manifest:
+  version: 1.0
+ 
+config:
+  admin:
+    users: ['nivSwisa1']
+
+automations:
+  senior_review:
+      if:
+        - true
+      run:
+        - action: add-reviewers@v1
+          args:
+            reviewers: [niv-organization/TeamFuckers, 'saharavishag', 'nivSwisa1']
+  assign_code_editors:
+      if:
+        - true
+      run:
+        - action: add-comment@v1
+          args:
+            comment: |
+              'comment + reviewer actions'
+  run_e2e_tests:
+      if:
+        - true
+      run:
+        - action: add-comment@v1
+          args:
+            comment: |
+              'add-comment automation'
