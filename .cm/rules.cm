@@ -14,7 +14,7 @@ automations:
       run:
         - action: add-reviewers@v1
           args:
-            reviewers: [niv-organization/TeamFuckers, 'saharavishag', 'nivSwisa1','yeelali14']
+            reviewers: ['nivSwisa1','yeelali14']
   assign_code_editors:
       if:
         - true
